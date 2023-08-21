@@ -1,0 +1,30 @@
+### Get all the movies
+GET http://localhost:3000/movies
+
+### Get a movie by id
+GET http://localhost:3000/movies/1
+
+### Get all movies by genre
+GET http://localhost:3000/movies?genre=Drama
+
+### Create a movie with POST
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "Miraculous: Ladybug & Cat Noir, The Movie",
+    "year": 2023,
+    "director": "Jeremy Zag",
+    "duration": 102,
+    "poster": "https://upload.wikimedia.org/wikipedia/en/0/02/Ladybug_%26_Cat_Noir_-_The_Movie_%28poster%29.jpg",
+    "genre": ["Pop", "Musical", "Drama"],
+    "rate": 9.0
+}
+
+### Update a movie with PATCH
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year": 1993
+}
